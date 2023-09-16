@@ -1,0 +1,8 @@
+---
+- name: ansible roles
+  hosts: webserver
+  become: true
+  roles:
+    - webserver
+    - mysites
+
