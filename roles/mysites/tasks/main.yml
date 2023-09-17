@@ -1,8 +1,15 @@
 ---
 - name: Install nginx
   apt:
-    name: nginx
+    name: "{{ packagename }}"
     state: present
+  become: yes
+
+- name: copy  nginx configuration 
+  template:
+    src:  conf.j2 
+    dest: /etc/nginx/nginx.conf
+  notify: restart Nginx  
   become: yes
 
 - name: nginx copy html file

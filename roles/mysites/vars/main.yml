@@ -1,2 +1,5 @@
 ---
-# vars file for mysites
+nginx_listen_port: 90
+nginx_server_name: localhost 
+role_name: fred
+packagename: nginx 
